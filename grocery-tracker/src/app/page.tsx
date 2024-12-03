@@ -96,9 +96,9 @@ export default function Home() {
         <p className="font-poppins text-[20px] font-[500]">Features:</p>
         <div className="grid grid-cols-3 mt-8 gap-x-8 gap-y-8 ">
           <div
-            className="group relative h-88 w-64 rounded text-center flex flex-col items-center "
+            className="group relative h-88 w-64 rounded text-center flex flex-col items-center hover:ring "
             style={{
-              backgroundImage: "url('/alert.jpg')",
+              backgroundImage: "url('/time.avif')",
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
@@ -119,9 +119,9 @@ export default function Home() {
             </Link>
           </div>
           <div
-            className="group relative h-80 w-64 rounded text-center flex flex-col items-center "
+            className="group relative h-80 w-64 rounded text-center flex flex-col items-center hover:ring"
             style={{
-              backgroundImage: "url('/stock.jpg')",
+              backgroundImage: "url('/bag1.avif')",
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
@@ -144,7 +144,7 @@ export default function Home() {
             </Link>
           </div>
           <div
-            className="group relative h-80 w-64 rounded text-center flex flex-col items-center "
+            className="group relative h-80 w-64 rounded text-center flex flex-col items-center hover:ring"
             style={{
               backgroundImage: "url('/more.avif')",
               backgroundSize: "cover",
