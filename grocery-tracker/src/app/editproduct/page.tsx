@@ -5,15 +5,16 @@ import Footer from "../components/Footer";
 import { useState } from "react";
 import ProductCard from "../components/ProductCard";
 
-export default function AddProduct() {
-  const handleAddProduct = () => {
+export default function EditProduct() {
+  const handleEditProduct = () => {
 
   }
+  const product = {productId:1, productName:"Apple", bestBefore:new Date("2025/03/02"), quantity:200, productImage: ""}
 
   return (
     <>
       <Navbar />
-    <ProductCard mode="Add" onAction={handleAddProduct}/>
+    <ProductCard product={product} mode="Submit" onAction={handleEditProduct}/>
       <Footer />
     </>
   );
