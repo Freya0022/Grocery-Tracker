@@ -40,11 +40,11 @@ export default function SignUp() {
                 className="px-2 py-1.5 rounded w-full placeholder:text-gray-400 bg-white border"
               />
             </div>
-   
-              <div className="text-[14px] text-left">
-                <input type="checkbox" name="accept" id="accept" />{" "}
-                <label htmlFor="accept">Accept all terms condition</label>
-              </div>
+
+            <div className="text-[14px] text-left">
+              <input type="checkbox" name="accept" id="accept" />{" "}
+              <label htmlFor="accept">Accept all terms & condition</label>
+            </div>
 
             <button className="w-full py-1.5 rounded-lg text-white bg-[#00B207] hover:bg-[#3DD243]">
               Create Account

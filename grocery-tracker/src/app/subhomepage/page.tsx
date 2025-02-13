@@ -22,7 +22,7 @@ export default function SubHomepage() {
             Add your latest products here!
           </h2>
 
-          <Link href={"/"}>
+          <Link href={"/addproduct"}>
             <button className="w-32 mr-24 py-2 bg-[#36C63F] text-[12px] text-white rounded-full hover:bg-[#36C63F29] hover:text-green-500">
               Add Product →
             </button>
@@ -43,7 +43,7 @@ export default function SubHomepage() {
             View all your products here!
           </h2>
 
-          <Link href={"/"}>
+          <Link href={"/viewproduct"}>
             <button className="w-32 mr-24 py-2 bg-[#36C63F] text-[12px] text-white rounded-full hover:bg-[#36C63F29] hover:text-green-500">
               View Product →
             </button>
@@ -64,7 +64,7 @@ export default function SubHomepage() {
             Edit your products details here!
           </h2>
 
-          <Link href={"/"}>
+          <Link href={"/editproduct"}>
             <button className="w-32 mr-24 py-2 bg-[#36C63F] text-[12px] text-white rounded-full hover:bg-[#36C63F29] hover:text-green-500">
               Edit Product →
             </button>

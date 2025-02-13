@@ -4,12 +4,13 @@ import Footer from "../components/Footer";
 
 export default function SignIn() {
   return (
-    <>
+    <><div className="flex flex-col min-h-screen">
       <Navbar />
-      <div className="flex items-center justify-center w-full h-[450px] ">
-        <div className="text-center w-1/3 h-2/3 shadow-[0_0_10px_rgba(0,0,0,0.2)] rounded-lg ">
+      <div className="flex-1">
+      <div className="flex items-center justify-center my-20">
+        <div className="text-center w-1/3 shadow-[0_0_10px_rgba(0,0,0,0.2)] rounded-lg ">
           <p className="my-4 text-[24px] font-[500]">Sign In</p>
-          <form className="space-y-4 px-6">
+          <form className="space-y-4 px-6 my-6">
             <div>
               <input
                 id="email"
@@ -47,8 +48,8 @@ export default function SignIn() {
             </p>
           </form>
         </div>
-      </div>
-      <Footer />
+      </div></div>
+      <Footer /></div>
     </>
   );
 }
