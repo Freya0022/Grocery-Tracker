@@ -4,5 +4,6 @@ export interface Product {
     bestBefore: Date,
     quantity:number,
     productImage:string,
+    brand: string,
     category: string,
 }
