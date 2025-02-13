@@ -19,6 +19,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
   const [productName, setProductName] = useState(product?.productName || "");
   const [bestBefore, setBestBefore] = useState(product?.bestBefore ? new Date(product.bestBefore).toISOString().split("T")[0] : "");
   const [quantity, setQuantity] = useState(product?.quantity || "");
+  const [brand, setBrand] = useState(product?.brand || "");
 
   const handleChooseImage = (e: any) => {
     const file = e.target.files[0];
@@ -29,7 +30,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
 
   return (
     <>
-      <div className="my-12 mx-72 py-2  border rounded">
+      <div className="mt-28 mb-20 mx-72 py-2  border rounded">
         <h1 className="font-poppins text-[20px] font-[500] py-2 px-4">
           Product Details
         </h1>
@@ -64,6 +65,19 @@ const ProductCard: React.FC<ProductCardProps> = ({
                   name="productName"
                   value={productName}
                   onChange={(e) => setProductName(e.target.value)}
+                  className="border rounded-md py-2 px-2 w-full text-gray-600"
+                />
+              </div>
+            </div>
+            <div className="space-y-1.5">
+              <label htmlFor="productName">Brand:</label>
+              <div>
+                <input
+                  type="text"
+                  id="productbrand"
+                  name="productbrand"
+                  value={brand}
+                  onChange={(e) => setBrand(e.target.value)}
                   className="border rounded-md py-2 px-2 w-full text-gray-600"
                 />
               </div>

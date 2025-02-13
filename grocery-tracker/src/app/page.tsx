@@ -3,100 +3,49 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 
 export default function Home() {
+  const categories = [
+    "Fresh Food",
+    "Frozen",
+    "Dairy",
+    "Bread",
+    "Drink",
+    "Liquor",
+    "Household",
+    "Pet Food",
+    "Snack",
+    "Cooking",
+  ];
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      <div className="flex flex-col py-8 px-72">
+      <div className="space-y-10 px-4 md:px-20 lg:px-72 my-20 w-full mx-auto">
+      <div className="flex flex-col ">
         <p className="font-poppins text-[20px] font-[500]">Categories:</p>
-        <div className="grid grid-cols-5 mt-8 gap-x-8 gap-y-8 ">
-          <Link href={"/"}>
-            <div className="group relative border border-2 rounded px-2 text-center h-36 hover:border-[#36C63F] hover:text-green-500 flex flex-col items-center justify-center">
-              <img src="/freshfood.jpg" alt="freshfood" className="h-24 w-24" />
-              <h2 className="mt-4 font-poppins text-[16px] font-[400]">
-                Fresh Food
-              </h2>
+        <div className="flex grid grid-cols-5 mt-8 gap-x-4 md:gap-x-8 gap-y-8 ">
+          {categories.map((category, index) => (
+            <div key={index}>
+              <Link href={`/productlist/${category}`}>
+                <div className="group relative border border-2 rounded px-2 text-center h-36 hover:border-[#36C63F] hover:text-green-500 flex flex-col items-center justify-center">
+                  <img
+                    src={`${category}.jpg`}
+                    alt={category}
+                    className="h-24 w-24"
+                  />
+                  <h2 className="mt-4 font-poppins text-[16px] font-[400]">
+                    {category}
+                  </h2>
+                </div>
+              </Link>
             </div>
-          </Link>
-          <Link href={"/"}>
-            <div className="group relative border border-2 rounded px-2 text-center h-36 hover:border-[#36C63F] hover:text-green-500 flex flex-col items-center justify-center">
-              <img src="/Frozen.png" alt="frozen" className="h-24 w-24" />
-              <h2 className="mt-4 font-poppins text-[16px] font-[400]">
-                Frozen
-              </h2>
-            </div>
-          </Link>
-          <Link href={"/"}>
-            <div className="group relative border border-2 rounded px-2 text-center h-36 hover:border-[#36C63F] hover:text-green-500 flex flex-col items-center justify-center">
-              <img src="milk.jpg" alt="milk" className="h-24 w-24" />
-              <h2 className="mt-4 font-poppins text-[16px] font-[400]">
-                Dairy
-              </h2>
-            </div>
-          </Link>
-          <Link href={"/"}>
-            <div className="group relative border border-2 rounded px-2 text-center h-36 hover:border-[#36C63F] hover:text-green-500 flex flex-col items-center justify-center">
-              <img src="/bread.jpg" alt="bread" className="h-24 w-24" />
-              <h2 className="mt-4 font-poppins text-[16px] font-[400]">
-                Bread
-              </h2>
-            </div>
-          </Link>
-          <Link href={"/"}>
-            <div className="group relative border border-2 rounded px-2 text-center h-36 hover:border-[#36C63F] hover:text-green-500 flex flex-col items-center justify-center">
-              <img src="/drink.jpg" alt="drink" className="h-24 w-24" />
-              <h2 className="mt-4 font-poppins text-[16px] font-[400]">
-                Drink
-              </h2>
-            </div>
-          </Link>
-          <Link href={"/"}>
-            <div className="group relative border border-2 rounded px-2 text-center h-36 hover:border-[#36C63F] hover:text-green-500 flex flex-col items-center justify-center">
-              <img src="/Liquor.jpg" alt="liquor" className="h-24 w-24" />
-              <h2 className="mt-4 font-poppins text-[16px] font-[400]">
-                Liquor
-              </h2>
-            </div>
-          </Link>
-          <Link href={"/"}>
-            <div className="group relative border border-2 rounded px-2 text-center h-36 hover:border-[#36C63F] hover:text-green-500 flex flex-col items-center justify-center">
-              <img src="household.jpg" alt="household" className="h-24 w-24" />
-              <h2 className="mt-4 font-poppins text-[16px] font-[400]">
-                Household
-              </h2>
-            </div>
-          </Link>
-          <Link href={"/"}>
-            <div className="group relative border border-2 rounded px-2 text-center h-36 hover:border-[#36C63F] hover:text-green-500 flex flex-col items-center justify-center">
-              <img src="/dogfood.jpg" alt="petfood" className="h-24 w-24" />
-              <h2 className="mt-4 font-poppins text-[16px] font-[400]">
-                Pet Food
-              </h2>
-            </div>
-          </Link>
-          <Link href={"/"}>
-            <div className="group relative border border-2 rounded px-2 text-center h-36 hover:border-[#36C63F] hover:text-green-500 flex flex-col items-center justify-center">
-              <img src="snack.jpg" alt="snack" className="h-24 w-24" />
-              <h2 className="mt-4 font-poppins text-[16px] font-[400]">
-                Snack
-              </h2>
-            </div>
-          </Link>
-          <Link href={"/"}>
-            <div className="group relative border border-2 rounded px-2 text-center h-36 hover:border-[#36C63F] hover:text-green-500 flex flex-col items-center justify-center">
-              <img src="/cooking.jpg" alt="cooking" className="h-24 w-24" />
-              <h2 className="mt-4 font-poppins text-[16px] font-[400]">
-                Cooking
-              </h2>
-            </div>
-          </Link>
+          ))}
         </div>
       </div>
 
-      <div className="flex flex-col py-8 px-72">
+      <div className="flex flex-col">
         <p className="font-poppins text-[20px] font-[500]">Features:</p>
         <div className="grid grid-cols-3 mt-8 gap-x-8 gap-y-8 ">
           <div
-            className="group relative h-88 w-64 rounded text-center flex flex-col items-center hover:ring "
+            className="group relative h-72 w-56 md:h-88 md:w-64 rounded text-center flex flex-col items-center hover:ring "
             style={{
               backgroundImage: "url('/time.avif')",
               backgroundSize: "cover",
@@ -112,14 +61,14 @@ export default function Home() {
             <h5 className="font-poppins text-[8px] font-[400] pr-2">
               MONTHS &nbsp;&nbsp;&nbsp;&nbsp; DAYS
             </h5>
-            <Link href={"/"}>
+            <Link href={"/subhomepage"}>
               <button className="w-24 mt-2 py-1.5 bg-white text-[10px] text-green-500 rounded-full hover:bg-[#36C63F] hover:text-white">
                 Learn More →
               </button>
             </Link>
           </div>
           <div
-            className="group relative h-80 w-64 rounded text-center flex flex-col items-center hover:ring"
+            className="group relative h-72 w-56 md:h-88 md:w-64 rounded text-center flex flex-col items-center hover:ring"
             style={{
               backgroundImage: "url('/bag1.avif')",
               backgroundSize: "cover",
@@ -137,14 +86,14 @@ export default function Home() {
                 10 or 20?
               </h2>
             </div>
-            <Link href={"/"}>
+            <Link href={"/subhomepage"}>
               <button className="w-24 mt-2 py-1.5 bg-white text-[10px] text-green-500 rounded-full hover:bg-[#36C63F] hover:text-white">
                 Learn More →
               </button>
             </Link>
           </div>
           <div
-            className="group relative h-80 w-64 rounded text-center flex flex-col items-center hover:ring"
+            className="group relative h-72 w-56 md:h-88 md:w-64 rounded text-center flex flex-col items-center hover:ring"
             style={{
               backgroundImage: "url('/more.avif')",
               backgroundSize: "cover",
@@ -155,13 +104,14 @@ export default function Home() {
               More Features
             </h2>
 
-            <Link href={"/"}>
+            <Link href={"/subhomepage"}>
               <button className="w-24 mt-2 py-1.5 bg-white text-[10px] text-green-500 rounded-full hover:bg-[#36C63F] hover:text-white">
                 Explore →
               </button>
             </Link>
           </div>
         </div>
+      </div>
       </div>
       <Footer />
     </div>
