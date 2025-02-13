@@ -29,12 +29,12 @@ export default function Navbar() {
                 Blog
               </h1>
             </Link>
-            <Link href={"/"}>
+            <Link href={"/aboutus"}>
               <h1 className="font-poppins text-[#999999] hover:text-green-500">
                 About Us
               </h1>
             </Link>
-            <Link href={"/"}>
+            <Link href={"/contactus"}>
               <h1 className="font-poppins text-[#999999] hover:text-green-500">
                 Contact Us
               </h1>
